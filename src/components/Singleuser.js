@@ -40,21 +40,14 @@ return(
   <div >
  <div>
     
-   <div >
-        <div className="card mb-3" style={{width: "540px"}}>
-  <div className="row g-0">
-    <div className="col-md-4">
-      <img src="" className="img-fluid rounded-start" alt="..." />
-    </div>
-    <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title">{user?.data?.first_name}</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
+   <div>
+       <div className="App">
+         <img src={user?.data?.avatar} />
+<h2> First Name: {user?.data?.first_name}</h2>
+<h2> Last Name: {user?.data?.last_name}</h2>
+<h2> Email: {user?.data?.email}</h2>
+
+       </div>
   <Link to="/"><button>Homepage</button></Link><br></br>
   <button disabled={page === 1} onClick={()=> setpage(page-1)}> Previos </button>
      <button onClick={()=> setpage(page + 1)}>Next</button>
