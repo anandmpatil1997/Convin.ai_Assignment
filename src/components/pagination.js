@@ -3,7 +3,7 @@ const Pagination =({currentpage,lastPage,onPageChange}) =>{
   return(
     <div>
       {arr.map((item,page)=>(
-<button onClick={()=> onPageChange(page+1)}
+<button class="button-4" onClick={()=> onPageChange(page+1)}
 disabled={page + 1 === currentpage}
 >
   {" "}

@@ -48,9 +48,9 @@ return(
 <h2> Email: {user?.data?.email}</h2>
 
        </div>
-  <Link to="/"><button>Homepage</button></Link><br></br>
-  <button disabled={page === 1} onClick={()=> setpage(page-1)}> Previos </button>
-     <button onClick={()=> setpage(page + 1)}>Next</button>
+  <Link to="/"><button class="button-4" >Homepage</button></Link><br></br>
+  <button class="button-4" disabled={page === 1} onClick={()=> setpage(page-1)}> Previos </button>
+     <button class="button-4" onClick={()=> setpage(page + 1)}>Next</button>
 <Pagination currentpage={page} lastPage={6} onPageChange={setpage}/>
   
   

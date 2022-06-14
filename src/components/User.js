@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Pagination from "./pagination";
 import {Link} from "react-router-dom";
-
+import "./User.css"
 
 function Userdata() {
   const [user,setuser]=useState([]);
@@ -41,19 +41,18 @@ function Userdata() {
 
   <div>
     {user?.data?.map((value, index)=>(
+      
    <div>
    <img src={value.avatar} />
    <h3>{value.first_name}</h3>
   <Link to={`/user/${value.id}`}>
-   <button> View More </button>
+  <button class="button-4" role="button">View More</button>
    </Link>
    </div> 
     ))}
 
     </div>
-<button disabled={page === 1} onClick={()=> setpage(page-1)}> Previos </button>
-     <button onClick={()=> setpage(page + 1)}>Next</button>
-<Pagination currentpage={page} lastPage={6} onPageChange={setpage}/>
+
 </div>
   )
 }
